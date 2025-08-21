@@ -2,7 +2,7 @@ package com.pahanaedu.test;
 import com.pahanaedu.dao.DBConnection;
 import java.sql.Connection;
 
-public class    DBConnectionTest {
+public class DBConnectionTest {
     public static void main(String[] args) {
         try {
             Connection conn = DBConnection.getConnection();

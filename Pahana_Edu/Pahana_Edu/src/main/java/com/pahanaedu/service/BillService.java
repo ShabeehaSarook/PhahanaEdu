@@ -12,14 +12,7 @@ public class BillService {
 
     private final BillDAO billDAO = new BillDAO();
 
-    /**
-     * Create a bill (with line items) for a customer.
-     * @param customerId existing customer ID
-     * @param itemIds    item IDs (same length as qtys, > 0)
-     * @param qtys       quantities (each > 0)
-     * @return new bill ID
-     * @throws Exception if validation fails or DAO throws
-     */
+
     public int createBill(int customerId, int[] itemIds, int[] qtys) throws Exception {
         if (customerId <= 0) throw new IllegalArgumentException("Invalid customerId");
         if (itemIds == null || qtys == null || itemIds.length == 0 || itemIds.length != qtys.length) {
